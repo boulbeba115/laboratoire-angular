@@ -1,0 +1,28 @@
+<div class="min-100 mt-5" *ngIf="isReady">
+    <div>
+        <h1>Modifer Outil</h1>
+    </div>
+    <div fxLayout="column">
+        <form>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Nom de L'outil </label>
+                        <input type="text" class="form-control" placeholder="saisis le Nom de l'Outil"
+                            name="titre" [(ngModel)]="outil.nomOutil">
+                        <small id="textHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Source de L'outil </label>
+                        <input type="text" class="form-control" placeholder="saisis le lien du source de l'Outil"
+                            name="titre" [(ngModel)]="outil.source">
+                        <small id="textHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mybtn" (click)="updateOutil()">Modifier Outil</button>
+        </form>
+    </div>
+</div>

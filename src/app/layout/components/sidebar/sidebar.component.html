@@ -1,0 +1,19 @@
+<div id="sidebar">
+    <mat-nav-list>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/dashboard']">
+            <mat-icon class="sidenav-icon">dashboard</mat-icon> {{ 'Tableau de bord' }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/membres']">
+            <mat-icon class="sidenav-icon">people</mat-icon> {{ 'Membres' }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/events']">
+            <mat-icon class="sidenav-icon">event</mat-icon> {{ 'Événement' }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/publication']">
+            <mat-icon class="sidenav-icon">publication</mat-icon> {{ 'Publication' }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/tools']">
+            <mat-icon class="sidenav-icon">build</mat-icon> {{ 'Outil' }}
+        </a>
+    </mat-nav-list>
+</div>

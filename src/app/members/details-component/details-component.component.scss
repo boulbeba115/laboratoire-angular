@@ -1,0 +1,136 @@
+#card {
+    background: #fff;
+    padding-bottom: 1em;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.24);
+    box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.24);
+}
+
+#userImage {
+    position: relative;
+    top: 1em;
+    display: block;
+    text-align: center;
+    margin: 1em auto;
+    max-width: 100px;
+    border-radius: 100%;
+}
+#badge {
+    background: #2ecc71;
+    color: #fff;
+    margin: auto;
+    padding: 5px 4px;
+    position: relative;
+    top: -20px;
+    left: 56%;
+    font-size: 18px;
+    border-radius: 100px;
+}
+
+#playerName {
+    position: relative;
+    top: -15px;
+    text-align: center;
+    font-size: 20px;
+    color: #555;
+    font-weight: bolder;
+}
+
+#states {
+    width: 85%;
+    margin: 1em auto;
+    font-weight: 300;
+}
+
+ul {
+    padding-bottom: 1em;
+    list-style: none;
+}
+
+ul li {
+    color: #999;
+    margin-bottom: 8px;
+    padding: 1px 0px 8px 0px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+#values li:hover {
+    color: #555;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#info {
+    position: relative;
+    float: left;
+    margin-left: 0;
+    text-align: left;
+}
+
+#values {
+    position: relative;
+    text-align: right;
+}
+
+#contactBtn {
+    position: relative;
+    background: #2ecc71;
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 0.5em;
+    width: 150px;
+    border-radius: 25px;
+    font-weight: 500;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+}
+#contactBtn:hover {
+    background: #27ae60;
+    color: #fff;
+}
+.div-stat {
+    height: 200px;
+    padding-top: 26px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.div-stat-green {
+    background: #599a58;
+    color: white;
+}
+.div-stat-green:hover {
+    background: #4ca14a;
+    color: white;
+}
+.div-stat-purple {
+    background: #3f51b5;
+    color: white;
+}
+.div-stat-purple:hover {
+    background: #2035aa;
+    color: white;
+}
+.div-stat-red {
+    background: #b53f86;
+    color: white;
+}
+.div-stat-red:hover {
+    background: #a82775;
+    color: white;
+}
+.div-stat-brown {
+    background: #b55a3f;
+    color: white;
+}
+.div-stat-brown:hover {
+    background: #b14929;
+    color: white;
+}
+.ccount {
+    font-size: 64px;
+    padding-top: 16px;
+}

@@ -1,0 +1,36 @@
+<div class="min-100 mt-5" *ngIf="isReady">
+    <div>
+        <h1>Modifier l'événement</h1>
+    </div>
+    <div fxLayout="column">
+        <form>
+            <div class="row">
+                <div class="col-sm-6"> 
+                    <div class="form-group">
+                        <label>Titre de l'événement </label>
+                        <input type="email" class="form-control" placeholder="saisis le Titre de l'événement" name="titre"
+                            [(ngModel)]="evenement.titre">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Date de l'événement</label>
+                        <input type="date" class="form-control" name="date" [(ngModel)]="evenement.date"
+                            placeholder="saisis la date de l'événement">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Lieu </label>
+                        <input type="email" class="form-control" name="prenom" [(ngModel)]="evenement.lieu"
+                            placeholder="saisis le lieu de l'événement">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mybtn" (click)="updateEvent()">Modifier événement</button>
+        </form>
+    </div>
+</div>

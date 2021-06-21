@@ -1,0 +1,44 @@
+<div class="min-100 mt-5">
+    <div>
+        <h1>Ajouter Publication</h1>
+    </div>
+    <div fxLayout="column">
+        <form>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Titre de publication </label>
+                        <input type="text" class="form-control" placeholder="saisis le Titre du publication"
+                            name="titre" [(ngModel)]="publication.titre">
+                        <small id="textHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Type </label>
+                        <input type="text" class="form-control" name="prenom" [(ngModel)]="publication.type"
+                            placeholder="saisis le type du publication">
+                        <small id="textHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Lien </label>
+                        <input type="text" class="form-control" name="prenom" [(ngModel)]="publication.lien"
+                            placeholder="saisis le lien du publication">
+                        <small id="textHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Source du Pdf </label>
+                        <input type="text" class="form-control" name="prenom" [(ngModel)]="publication.pdfSrc"
+                            placeholder="saisis le lien du publication">
+                        <small id="textHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mybtn" (click)="addPublication()">Ajouter publication</button>
+        </form>
+    </div>
+</div>

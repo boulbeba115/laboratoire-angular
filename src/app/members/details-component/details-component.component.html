@@ -1,0 +1,104 @@
+<div class="min-100 mt-5" style="margin: 0 !important;" *ngIf="isReady">
+    <div>
+        <h1>Membre Details </h1>
+    </div>
+    <div fxLayout="column">
+        <div class="row">
+            <div class="col-sm-6">
+                <div id='card'>
+                    <img alt='user-image' id='userImage' src='https://randomuser.me/api/portraits/men/62.jpg'>
+                    <br>
+                    <h4 id='playerName'>{{member.nom + " " + member.prenom}}</h4>
+                    <div id='states'>
+                        <ul id='info'>
+                            <li>
+                                Membre
+                            </li>
+                            <li>
+                                Email
+                            </li>
+                            <li>
+                                Lien Cv
+                            </li>
+                            <ng-container *ngIf="type == 'Etudiant'">
+                                <li>
+                                    Date Inscription
+                                </li>
+                                <li>
+                                    Diplome
+                                </li>
+                                <li>
+                                    Encadrant
+                                </li>
+                            </ng-container>
+                            <ng-container *ngIf="type == 'Enseignant'">
+                                <li>
+                                    Grade
+                                </li>
+                                <li>
+                                    Etablissement
+                                </li>
+                            </ng-container>
+
+                        </ul>
+                        <ul id='values'>
+                            <li>{{type}}</li>
+                            <li>{{member.email}}</li>
+                            <li> <a href="{{member.cv}}" target="_blank">
+                                    <mat-icon class="mat-accent">Cv</mat-icon>
+                                </a>
+                            </li>
+                            <ng-container *ngIf="type == 'Etudiant'">
+                                <li>
+                                    {{member.dateInscription}}
+                                </li>
+                                <li>
+                                    {{member.diplome}}
+                                </li>
+                                <li>
+                                    {{member.encadrant}}
+                                </li>
+                            </ng-container>
+                            <ng-container *ngIf="type == 'Enseignant'">
+                                <li>
+                                    {{member.grade}}
+                                </li>
+                                <li>
+                                    {{member.etablissement}}
+                                </li>
+                            </ng-container>
+                        </ul>
+                    </div>
+                    <a href='#' id='contactBtn'>
+                        <i class='fa fa-paper-plane spin'></i>
+                        Contact
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="div-stat div-stat-green">
+                            <h1 class="ccount">{{member.listEvenement.length}}</h1>
+                            <h1>Événement</h1>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="div-stat div-stat-purple">
+                            <h1 class="ccount">{{member.lisPublication.length}}</h1>
+                            <h1>Publication</h1>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="div-stat div-stat-red div-stat-red">
+                            <h1 class="ccount">{{member.listOutil.length}}</h1>
+                            <h1>Outils</h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

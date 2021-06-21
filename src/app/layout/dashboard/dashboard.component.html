@@ -1,0 +1,16 @@
+<div class="mb-20" fxLayout="row" fxLayout.lt-md="column" fxFlex fxLayoutGap="20px" *ngIf="isReady">
+    <div fxFlex>
+        <app-stat [bgClass]="'danger'" [icon]="'dashboard'" [count]="stats.nbMember" [label]="'Nombre Totale des Membres!'"></app-stat>
+    </div>
+    <div fxFlex>
+        <app-stat [bgClass]="'warn'" [icon]="'view_list'" [count]="stats.nbEvent" [label]="'Nombre Totale des événements!'"></app-stat>
+    </div>
+    <div fxFlex>
+        <app-stat [bgClass]="'success'" [icon]="'shopping_cart'" [count]="stats.nbPublication" [label]="'Nombre Totale des publication'"></app-stat>
+    </div>
+    <div fxFlex>
+        <app-stat [bgClass]="'info'" [icon]="'contact_support'" [count]="stats.nbOutil" [label]="'Nombre Totale des outils'"></app-stat>
+    </div>
+</div>
+
+

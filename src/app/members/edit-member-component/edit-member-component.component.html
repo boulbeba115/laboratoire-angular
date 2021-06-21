@@ -1,0 +1,121 @@
+<div class="min-100 mt-5" style="margin: 0 !important;" *ngIf="isReady">
+    <div>
+        <h1>Ajouter membre</h1>
+    </div>
+    <div fxLayout="column">
+        <form>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Nom </label>
+                        <input type="email" class="form-control" placeholder="saisis votre Nom" name="nom"
+                            [(ngModel)]="member.nom">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Prenom </label>
+                        <input type="email" class="form-control" name="prenom" [(ngModel)]="member.prenom"
+                            placeholder="saisis votre Prenom">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>CIN</label>
+                        <input type="text" class="form-control" name="cin" [(ngModel)]="member.cin"
+                            placeholder="saisis votre Cin">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" placeholder="saisis l'email" name="email"
+                            [(ngModel)]="member.email">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Date Naissance</label>
+                        <input type="date" class="form-control" name="date" [(ngModel)]="member.date"
+                            placeholder="saisis votre Cin">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Cv url</label>
+                        <input type="text" class="form-control" placeholder="saisis cv url" name="cv"
+                            [(ngModel)]="member.cv">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Photo url</label>
+                        <input type="email" class="form-control" name="photo" [(ngModel)]="member.photo"
+                            placeholder="saisis l'url du Photo">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <ng-container *ngIf="type == 'Etudiant'">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Date d'inscription</label>
+                            <input type="date" class="form-control" name="dateInscription"
+                                [(ngModel)]="member.dateInscription" placeholder="saisis date d'inscription">
+                            <small id="emailHelp" class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Diplome</label>
+                            <select name="diplome" class="form-control" [(ngModel)]="member.diplome">
+                                <option value="Master">Master</option>
+                                <option value="Thèse">Thèse</option>
+                            </select>
+                            <small id="emailHelp" class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Encadrant</label>
+                            <select name="encadrant" class="form-control" [(ngModel)]="member.encadrant">
+                                <option *ngFor="let teacher of teachers" [value]="teacher.id" value="Master">
+                                    {{teacher.nom +' '+ teacher.prenom}}
+                                </option>
+                            </select>
+                            <small id="emailHelp" class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="type == 'Enseignant'">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Grade</label>
+                            <select name="grade" class="form-control" [(ngModel)]="member.grade">
+                                <option value="Assistant">Assistant</option>
+                                <option value="Maître assistant"> Maître assistant</option>
+                                <option value="Maître de conférences"> Maître de conférences</option>
+                                <option value="Professeur de l'enseignement supérieur"> Professeur de l'enseignement supérieur</option>
+                            </select>
+                            <small id="emailHelp" class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Etablissement</label>
+                            <input type="email" class="form-control" name="etablissement" [(ngModel)]="member.etablissement"
+                                placeholder="saisis l'etablissement">
+                            <small id="emailHelp" class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <button type="submit" class="btn btn-primary mybtn" (click)="updateMember()" style="float: right;" >Modifier membre</button>
+        </form>
+    </div>
+</div>
