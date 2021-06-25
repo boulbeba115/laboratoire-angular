@@ -11,7 +11,7 @@ Lab Management Application made with Angular 9 and SpringBoot framework
 # Uml Diagram
 [![uml-2.png](https://i.postimg.cc/25WwZ3F5/uml-2.png)](https://postimg.cc/xk0MrfZr)
 # Requirements
-- Sts or intej or maven (use console) to run backend
+- Sts IDE or intellij IDE or  use console with maven to run backend
 - Angular cli 
 - Sql DataBase
 # Installation
